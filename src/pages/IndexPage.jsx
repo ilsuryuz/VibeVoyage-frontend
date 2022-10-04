@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react"
 
-export default function Index() {
-  return (
-    <div>Index</div>
+
+function IndexPage() {
+return (
+  <div>
+    <h3>Organize your life, and keep your mind in peace!</h3> 
+    <img/>
+  </div>
   )
 }
+  
+
+
+export default IndexPage;
