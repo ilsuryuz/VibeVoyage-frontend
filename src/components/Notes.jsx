@@ -1,17 +1,25 @@
-import {useState} from "react"
-import Notes from "../components/Notes"
-import Main from "../components/Main"
-import { Link } from "react-router-dom"
 
-function NotesPage(props) {
+function Notes({notes}) {
 
-  // loaded function
+// loaded function
   const loaded = () => {
-    return props.notes.map((note) => (
-     console.log(note)
+    return notes.map((note) => (
+     <div key={note._id} className="note">
+        <h1>{note.name}</h1>
+        <h3>{note.title}</h3>
+        <h3>{note.content}</h3>   
+      </div>   
+
+        
+      //  console.log(note)
     ));
   };
 
+  const loading = () => {
+    return <h1>Loading...</h1>;
+  };
+
+  return notes ? loaded() : loading();
 }
 
 export default Notes;

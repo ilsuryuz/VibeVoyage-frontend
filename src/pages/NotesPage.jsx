@@ -6,12 +6,10 @@ function NotesPage({notes}, {createNotes}) {
 
     return(
       <div>
-        <h1>hi</h1>
+        {/* <h1>hi</h1> */}
       <Notes notes={notes} />
       </div>
     )
   }
-
-  
 
 export default NotesPage;
