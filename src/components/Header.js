@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = (props) => {
+function Header (props) {
+  return(
   <header className="header">
     <Link to='/'>
       <h1>Vibe Voyage</h1>
@@ -14,6 +15,10 @@ const Header = (props) => {
       </ul>
     </nav>
   </header>
+
+
+  )
+
 }
 
 export default Header
