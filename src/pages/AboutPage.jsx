@@ -18,7 +18,7 @@ const AboutPage = () => {
    <h3>Ultimately at the core becoming whole is the ability to grow. While we may not be able to change the world at the time, 
     we take great pride in helping you complete the actions that will lead to better habits and overall a higher quality of life. 
 </h3>
-   <h1>Our Team</h1>
+   <h1>Our Team </h1>
       
       </div>
   )
