@@ -26,10 +26,10 @@ function VideoPage (props) {
 
  
   const loaded = () => {
-    return props.videos.map((person) => (
-      <div key={person._id} className="person">
+    return props.videos.map((video) => (
+      <div key={video._id} className="video">
         <Link to={`/videos/${video._id}`}><h1>{video.name}</h1></Link>
-        <img src={person.image} alt={person.name} />
+        <url src={video.url} alt={video.name} />
         <h3>{video.title}</h3>
       </div>
     ));
@@ -70,4 +70,4 @@ function VideoPage (props) {
   );
 }
 
-export default VideoPage;
+export default VideoPage
