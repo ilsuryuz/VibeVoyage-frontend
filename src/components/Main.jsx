@@ -39,7 +39,14 @@ const updateNotes = async (person, id) => {
     },
     body: JSON.stringify(notes),
   })
-  getNotes()
+  getNotes();
+}
+
+const deleteNotes = async (id) => {
+  await fetch(URL + id,{
+    method:"DELETE",
+  }) 
+  getNotes();
 }
 
   useEffect(() => {getNotes()}, []);
