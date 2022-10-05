@@ -8,5 +8,5 @@ return (
   </div>
   )
 }
-  
+
 export default IndexPage;
