@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 
-function VideoPage (props) {
 
+function VideosPage (props) {
+
+    <div>
+       
+    </div>
+    console.log(props);
   const [ newForm, setNewForm ] = useState({
     name: "",
     url: "",
@@ -13,24 +18,25 @@ function VideoPage (props) {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
 
-
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(props);
     props.createVideo(newForm);
     setNewForm({
       name: "",
-      image: "",
-      title: "",
-    });
+      url: "",
+       });
+       console.log(event);
   };
 
-
   const loaded = () => {
-    return props.videos.map((video) => (
+    console.log(props.video);
+    return props.video.map((video) => (
       <div key={video._id} className="video">
-        <Link to={`/videos/${video._id}`}><h1>{video.name}</h1></Link>
-        <url src={video.url} alt={video.name} />
-        <h3>{video.title}</h3>
+        {/* <Link to={`/videos/${video._id}`}><h1>{video.name}</h1></Link> */}
+        <a href={video.url} alt={video.name} >{video.name}</a>
+      
       </div>
     ));
   };
@@ -45,29 +51,24 @@ function VideoPage (props) {
         <input
           type="text"
           value={newForm.name}
-          name="video name"
+          name="name"
           placeholder="video name"
           onChange={handleChange}
         />
+        <br></br>
         <input
           type="text"
-          value={newForm.image}
-          name="video"
+          value={newForm.url}
+          name="url"
           placeholder="video URL"
           onChange={handleChange}
         />
-        <input
-          type="text"
-          value={newForm.title}
-          name="title"
-          placeholder="title"
-          onChange={handleChange}
-        />
-        <input type="submit" value="Add Video" />
+        <input type="submit" value="Add New Video" />
       </form>
-      {props.videos ? loaded() : loading()}
+      {props.video ? loaded() : loading()}
     </section>
   );
 }
 
-export default VideoPage;
+export default VideosPage;
+//Help From Office Hrs
