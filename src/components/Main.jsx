@@ -5,6 +5,7 @@ import NotesPage from "../pages/NotesPage";
 import VideosPage from "../pages/VideosPage";
 import AboutPage from "../pages/AboutPage";
 
+
 function Main(props) {
   const [notes, setNotes] = useState(null);
 
