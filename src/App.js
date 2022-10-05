@@ -6,8 +6,10 @@ import Videos from './components/Videos';
 function App() {
   return (
     <div className="App">
+    <AboutPage />
+    <Main />
+    <VideosPage />
     <Videos />
-    
     </div>
   );
 }
