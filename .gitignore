@@ -24,3 +24,6 @@ yarn-error.log*
 
 #page 
 VideoPage.jsx
+src/App.js
+src/App.js
+src/index.js
