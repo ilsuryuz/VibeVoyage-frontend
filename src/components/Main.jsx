@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import IndexPage from "../pages/IndexPage";
 import NotesPage from "../pages/NotesPage";
-import VideoPage from "../pages/VideoPage";
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+import VideosPage from "../pages/VideosPage";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function Main(props) {
   const [ notes, setNotes ] = useState(null);
@@ -27,26 +27,20 @@ function Main(props) {
       },
       body: JSON.stringify(notes),
     });
+  
     getNotes();
   };
 
-  const updateNotes = async (notes, id) =>{
-    await fetch(URL + id, {
-      method:"PUT",
-      headers: {
-        "content-Type": "Application/json",
-      },
-      body: JSON.stringify(notes),
-    })
-    getNotes()
-  }
-
-  const deletePeople = async (id) => {
-    await fetch(URL + id, {
-      method:"DELETE",
-    })
-    getNotes()
-  }
+const updateNotes = async (person, id) => {
+  await fetch(URL + id, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "Application/json",
+    },
+    body: JSON.stringify(notes),
+  })
+  getNotes()
+}
 
   useEffect(() => {getNotes()}, []);
 
