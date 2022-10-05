@@ -1,15 +1,13 @@
 import Main from "./components/Main";
-import AboutPage from "./pages/AboutPage";
-import VideosPage from "./pages/VideosPage";
-import Videos from "./components/Videos";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-    <AboutPage />
+    <Header />
     <Main />
-    <VideosPage />
-    <Videos />
+    <Footer />
     </div>
   );
 }

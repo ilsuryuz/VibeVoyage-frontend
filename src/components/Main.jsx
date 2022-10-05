@@ -3,13 +3,13 @@ import { Route, Switch } from "react-router-dom";
 import IndexPage from "../pages/IndexPage";
 import NotesPage from "../pages/NotesPage";
 import VideosPage from "../pages/VideosPage";
-import Footer from "./Footer";
-import Header from "./Header";
+import AboutPage from "../pages/AboutPage";
+
 
 function Main(props) {
-  const [ notes, setNotes ] = useState(null);
+  const [notes, setNotes] = useState(null);
 
-  const URL = "http://localhost:4000/notes/";
+  const URL = "https://vibe-voyage.herokuapp.com/notes";
 
   const getNotes = async () => {
     const response = await fetch(URL);
@@ -19,7 +19,7 @@ function Main(props) {
   };
 
   const createNotes = async (notes) => {
-   
+
     await fetch(URL, {
       method: "POST",
       headers: {
@@ -27,15 +27,14 @@ function Main(props) {
       },
       body: JSON.stringify(notes),
     });
-  
+
     getNotes();
   };
 
-  useEffect(() => {getNotes()}, []);
+  useEffect(() => { getNotes() }, []);
 
   return (
     <main>
-      <Header />
       <Switch>
         <Route exact path="/">
           <IndexPage />
@@ -43,21 +42,25 @@ function Main(props) {
         <Route path="/notes">
           <NotesPage notes={notes} createNotes={createNotes} />
         </Route>
-        {/* <Route
+        <Route
           path="/notes/:id"
-          render={(rp) => (
-            <NotesPage
-              {...rp}
-            />
-          )}
-          /> */}
-        {/* <Route>
-            <VideoPage/>
-        <Route/> */}
+          render={(rp) => {
+            return (
+              <NotesPage
+                {...rp}
+              />
+            )
+          }}
+        />
+        <Route path="/meditation">
+          <VideosPage />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
       </Switch>
-      <Footer />
     </main>
-    );
-  }
+  );
+}
 
 export default Main;
