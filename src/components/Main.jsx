@@ -3,8 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import IndexPage from "../pages/IndexPage";
 import NotesPage from "../pages/NotesPage";
 import VideosPage from "../pages/VideosPage";
-import Footer from "./Footer";
-import Header from "./Header";
+import AboutPage from "../pages/AboutPage";
 
 function Main(props) {
   const [notes, setNotes] = useState(null);
@@ -47,13 +46,16 @@ function Main(props) {
           render={(rp) => {
             return (
               <NotesPage
-                {...rp} 
-                />
+                {...rp}
+              />
             )
           }}
-            />
-        <Route>
+        />
+        <Route path="/meditation">
           <VideosPage />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
         </Route>
       </Switch>
     </main>

@@ -9,9 +9,9 @@ function Header (props) {
     </Link>
     <nav>
       <ul className="navLinks">
-        <li><Link to="about">About</Link></li>
-        <li><Link to='login'>Login</Link></li>
-        <li><Link to='register'>Register</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/register'>Register</Link></li>
       </ul>
     </nav>
   </header>
