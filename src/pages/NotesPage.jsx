@@ -1,9 +1,16 @@
-import React from 'react'
+import {useState} from "react"
+import Notes from "../components/Notes"
+import Main from "../components/Main"
 
-const Notes = () => {
-  return (
-    <div>Notes</div>
-  )
-}
+function NotesPage({notes}, {createNotes}) {
 
-export default Notes
+    return(
+      <div>
+        {/* <h1>hi</h1> */}
+      <Notes notes={notes} />
+      </div>
+    )
+  }
+
+export default NotesPage;
+
