@@ -31,7 +31,27 @@ function Main(props) {
     getNotes();
   };
 
+const updateNotes = async (person, id) => {
+  await fetch(URL + id, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "Application/json",
+    },
+    body: JSON.stringify(notes),
+  })
+  getNotes();
+}
+
+const deleteNotes = async (id) => {
+  await fetch(URL + id,{
+    method:"DELETE",
+  }) 
+  getNotes();
+}
+
+ 
   useEffect(() => { getNotes() }, []);
+
 
   return (
     <main>
