@@ -1,6 +1,5 @@
 import React from "react"
 
-
 function IndexPage() {
 return (
   <div>
@@ -9,7 +8,5 @@ return (
   </div>
   )
 }
-  
-
 
 export default IndexPage;

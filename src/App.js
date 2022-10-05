@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-router-dom";
-import './App.css';
-import Main from "./components/Main"
+import Main from "./components/Main";
+import AboutPage from "./pages/AboutPage";
+
 
 function App() {
   return (
     <div className="App">
-      <Main/>
+      <AboutPage />
+      <Main />
     </div>
   );
 }
