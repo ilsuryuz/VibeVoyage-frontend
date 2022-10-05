@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import IndexPage from "../pages/IndexPage";
 import NotesPage from "../pages/NotesPage";
-import VideoPage from "../pages/VideoPage";
+import VideosPage from "../pages/VideosPage";
 import Footer from "./Footer";
 import Header from "./Header";
 
