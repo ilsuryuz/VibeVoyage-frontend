@@ -4,6 +4,7 @@ import IndexPage from "../pages/IndexPage";
 import NotesPage from "../pages/NotesPage";
 import VideosPage from "../pages/VideosPage";
 import AboutPage from "../pages/AboutPage";
+import EmbedVideo from "./EmbedVideos";
 
 
 function Main(props) {
@@ -14,7 +15,6 @@ function Main(props) {
   const getNotes = async () => {
     const response = await fetch(URL + "notes/");
     const data = await response.json();
-    console.log(data)
     setNotes(data);
   };
 
@@ -31,13 +31,13 @@ function Main(props) {
     getNotes();
   };
 
-  const updateNotes = async (person, id) => {
+  const updateNotes = async (note, id) => {
     await fetch(URL + "notes/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
       },
-      body: JSON.stringify(notes),
+      body: JSON.stringify(note),
     })
     getNotes();
   }
@@ -48,56 +48,39 @@ function Main(props) {
     })
     getNotes();
   }
+  const [video, setVideo] = useState(null);
 
-  const getVideos = async () => {
+  const getVideo = async () => {
     const response = await fetch(URL + "videos/");
     const data = await response.json();
-    console.log(data)
-    setNotes(data);
+    setVideo(data);
   };
 
-const getVideo = async () => {
-  const response = await fetch(URL);
-  const data = await response.json();
-  setVideo(data);
-}
+  const createVideo = async video => {
 
-const createVideo = async video => {
-  
-  await fetch(URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "Application/json",
-    },
-    body: JSON.stringify(ideo),
-  });
-//Update Video Directory
-  getVideo();
-}
+    await fetch(URL + "videos/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(video),
+    });
+    //Update Video Directory
+    getVideo();
+  }
 
-const updateVideo = async (video, id) => {
-  // makes request to get video
-  await fetch(URL + id, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "Application/json",
-    },
-    body: JSON.stringify(video),
-  });
+  const deleteVideo = async id => {
 
-  getVideo();
-}
+    await fetch(URL + "videos/" + id, {
+      method: "DELETE",
+    })
 
-const deleteVideo = async id => {
-  
-  await fetch(URL + id, {
-    method: "DELETE",
-  })
-  
-  getVideo();
-}
-  useEffect(() => { getNotes(); getVideos() }, []);
-
+    getVideo();
+  }
+  useEffect(() => {
+    getNotes();
+    getVideo();
+  }, []);
 
   return (
     <main>
@@ -106,24 +89,31 @@ const deleteVideo = async id => {
           <IndexPage />
         </Route>
         <Route path="/notes">
-          <NotesPage notes={notes} createNotes={createNotes} />
+          <NotesPage
+            notes={notes}
+            createNotes={createNotes}
+            updateNotes={updateNotes}
+            deleteNotes={deleteNotes}
+          />
         </Route>
         <Route
           path="/notes/:id"
           render={(rp) => {
             return (
               <NotesPage
+                updateNotes={updateNotes}
+                deleteNotes={deleteNotes}
                 {...rp}
               />
             )
           }}
         />
         <Route path="/meditation">
+        <EmbedVideo embedId="pn6sTK6a3Ig" />
           <VideosPage
-          video={video}
-          updateVideo={updateVideo}
-          deleteVideo={deleteVideo}
-          createVideo={createVideo} />
+            video={video}
+            deleteVideo={deleteVideo}
+            createVideo={createVideo} />
         </Route>
         <Route path="/about">
           <AboutPage />
@@ -134,3 +124,4 @@ const deleteVideo = async id => {
 }
 
 export default Main;
+
