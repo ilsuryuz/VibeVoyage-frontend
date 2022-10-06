@@ -4,6 +4,7 @@ import IndexPage from "../pages/IndexPage";
 import NotesPage from "../pages/NotesPage";
 import VideosPage from "../pages/VideosPage";
 import AboutPage from "../pages/AboutPage";
+import EmbedVideo from "./EmbedVideos";
 
 
 function Main(props) {
@@ -108,6 +109,7 @@ function Main(props) {
           }}
         />
         <Route path="/meditation">
+        <EmbedVideo embedId="pn6sTK6a3Ig" />
           <VideosPage
             video={video}
             deleteVideo={deleteVideo}
