@@ -48,15 +48,48 @@ function Main(props) {
     })
     getNotes();
   }
-
-  const getVideos = async () => {
+  const [ video, setVideo ] = useState(null);
+  const getVideo = async () => {
     const response = await fetch(URL + "videos/");
     const data = await response.json();
     console.log(data)
     setNotes(data);
   };
 
+  const createVideo = async video => {
+    
+    await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(video),
+    });
+ //Update Video Directory
+    getVideo();
+  }
 
+  const updateVideo = async (video, id) => {
+    // makes request to get video
+    await fetch(URL + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(video),
+    });
+
+    getVideo();
+  }
+
+  const deleteVideo = async id => {
+    
+    await fetch(URL + id, {
+      method: "DELETE",
+    })
+    
+    getVideo();
+  }
   useEffect(() => {
     getNotes();
 
@@ -83,7 +116,11 @@ function Main(props) {
           }}
         />
         <Route path="/meditation">
-          <VideosPage />
+          <VideosPage
+           video={video}
+           updateVideo={updateVideo}
+           deleteVideo={deleteVideo}
+           createVideo={createVideo} />
         </Route>
         <Route path="/about">
           <AboutPage />
