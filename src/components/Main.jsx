@@ -30,13 +30,13 @@ function Main(props) {
     getNotes();
   };
 
-  const updateNotes = async (Note, id) => {
+  const updateNotes = async (note, id) => {
     await fetch(URL + "notes/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
       },
-      body: JSON.stringify(notes),
+      body: JSON.stringify(note),
     })
     getNotes();
   }
