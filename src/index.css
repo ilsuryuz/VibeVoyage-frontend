@@ -1,3 +1,11 @@
+:root{
+  --fancy-black: #141115;
+  --champagne-pink:#F2DFD7;
+  --thistle-purple:#CAB6E2;
+  --powder-blue:#A9DBD9;
+  --eggshell-white:#FAF0DB;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,7 +29,7 @@ nav {
   top: 0;
   width: 100%;
   height: 50px;
-  background:rgb(255, 255, 255);
+  background:var(--thistle-purple);
 }
 
 .navLinks {
@@ -35,15 +43,56 @@ nav {
   position: relative;
 }
 
+ul{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  padding: 5px ;
+}
+
 
 ul li {
-    margin-right: 30px;
     font-size: 20px;
     text-transform: uppercase;
-    color: #f1f1f1;
+    color: var(--eggshell-white);
     cursor: pointer;
 }
 
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background:var(--thistle-purple);
+}
+
+.footerLinks {
+  list-style-type: none;
+  color: var(--eggshell-white);
+  background: ;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* Links */
+a:link,
+a:visited{
+  color:var(--powder-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--eggshell-white);
+}
 
 /*Video Embeds*/
 .video-responsive {
