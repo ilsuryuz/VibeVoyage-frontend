@@ -9,10 +9,10 @@ import AboutPage from "../pages/AboutPage";
 function Main(props) {
   const [notes, setNotes] = useState(null);
 
-  const URL = "https://vibe-voyage.herokuapp.com/notes";
+  const URL = "https://vibe-voyage.herokuapp.com/";
 
   const getNotes = async () => {
-    const response = await fetch(URL);
+    const response = await fetch(URL + "notes/");
     const data = await response.json();
     console.log(data)
     setNotes(data);
@@ -20,7 +20,7 @@ function Main(props) {
 
   const createNotes = async (notes) => {
 
-    await fetch(URL, {
+    await fetch(URL + "notes/", {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",
@@ -31,26 +31,72 @@ function Main(props) {
     getNotes();
   };
 
-const updateNotes = async (person, id) => {
+  const updateNotes = async (person, id) => {
+    await fetch(URL + "notes/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(notes),
+    })
+    getNotes();
+  }
+
+  const deleteNotes = async (id) => {
+    await fetch(URL + "notes/" + id, {
+      method: "DELETE",
+    })
+    getNotes();
+  }
+
+  const getVideos = async () => {
+    const response = await fetch(URL + "videos/");
+    const data = await response.json();
+    console.log(data)
+    setNotes(data);
+  };
+
+const getVideo = async () => {
+  const response = await fetch(URL);
+  const data = await response.json();
+  setVideo(data);
+}
+
+const createVideo = async video => {
+  
+  await fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "Application/json",
+    },
+    body: JSON.stringify(ideo),
+  });
+//Update Video Directory
+  getVideo();
+}
+
+const updateVideo = async (video, id) => {
+  // makes request to get video
   await fetch(URL + id, {
     method: "PUT",
     headers: {
       "Content-Type": "Application/json",
     },
-    body: JSON.stringify(notes),
+    body: JSON.stringify(video),
+  });
+
+  getVideo();
+}
+
+const deleteVideo = async id => {
+  
+  await fetch(URL + id, {
+    method: "DELETE",
   })
-  getNotes();
+  
+  getVideo();
 }
-
-const deleteNotes = async (id) => {
-  await fetch(URL + id,{
-    method:"DELETE",
-  }) 
-  getNotes();
-}
-
- 
-  useEffect(() => { getNotes() }, []);
+  useEffect(() => { getNotes(); getVideos() }, []);
 
 
   return (
@@ -73,7 +119,11 @@ const deleteNotes = async (id) => {
           }}
         />
         <Route path="/meditation">
-          <VideosPage />
+          <VideosPage
+          video={video}
+          updateVideo={updateVideo}
+          deleteVideo={deleteVideo}
+          createVideo={createVideo} />
         </Route>
         <Route path="/about">
           <AboutPage />

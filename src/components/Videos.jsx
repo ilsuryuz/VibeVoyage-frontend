@@ -56,7 +56,7 @@ function Videos(props) {
         {/* 
           <Index video={video} createVideo={createVideo} />
         </Route> */}
-        <Route path="/">
+        <Route path="/Video">
          {/* // path= “/Video/:id" */}
          {/* path= "/Video/:id"
           element={ */}
