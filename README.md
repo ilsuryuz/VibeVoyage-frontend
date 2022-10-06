@@ -29,27 +29,26 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 * Users can delete thier entries.
 * Users benefit from the relaxation/meditation page.    
 ## Trello Planning
-https://trello.com/b/X4KtfK7j/vibevoyage
+[Team Panther.js Trello Board](https://trello.com/b/X4KtfK7j/vibevoyage)
 ## Wireframe
-https://trello.com/1/cards/6335ab1d9ef33e030b3094ec/attachments/6335ab1d9ef33e030b309506/previews/6335ab1e9ef33e030b309513/download/image.png
-## Screenshot
-* Design elements implemented using HTML and CSS.
+[Team Panther.js Wireframe](https://trello.com/1/cards/6335ab1d9ef33e030b3094ec/attachments/6335ab1d9ef33e030b309506/previews/6335ab1e9ef33e030b309513/download/image.png)
+## Screenshots
+
 
 
 ## <a name="nextsteps"></a>Project Next Steps
-* users will be able to access Spotify API for calming music
-* users will also be able to use this app on mobile devices.
+* Users will be able to access Spotify API for calming music
+* App will be mobile responsive
 ## <a name="deployment"></a>Deployed Link
-Heroku(backend):
-https://vibe-voyage.herokuapp.com/notes/  
+- [Backend(hosted on Heroku)](https://vibe-voyage.herokuapp.com/notes/)  
+-[Frontend(hosted on Netlify)](____)
 
 
-##Full Functionality can be obtained via vs code ***
-* You can view the repository:
-[Github.com](https://github.com/brandonhernandez304/VibeVoyage-frontend)
-[Github.com](https://github.com/brandonhernandez304/VibeVoyage-backend)
-* If unable to view please go live locally through VS Code
+* Our Github Repositories:
+- [Frontend](https://github.com/brandonhernandez304/VibeVoyage-frontend)
+- [Backend](https://github.com/brandonhernandez304/VibeVoyage-backend)
+
 ## Works Cited:
 Stack Overflow and MDN
 ## <a name="author"></a>About The Author
-We are  centric and functional devlopers that specializes in creating meaningful products.
+We are  centric and functional devlopers that specialize in creating meaningful products.
