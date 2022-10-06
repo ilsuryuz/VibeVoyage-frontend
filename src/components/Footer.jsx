@@ -3,14 +3,15 @@ import { Link } from "react-router-dom"
 
  function Footer (props) {
     return (
-        <div className = 'footer'>
+        <footer className = 'footer'>
+            <nav>
             <ul className = 'footerLinks'>
-            <Link to="/"><li>Home</li></Link>
-            <Link to = "/notes"><li>Notes</li></Link>    
-            <Link to = "/meditation"><li>Meditation</li></Link>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to = "/notes">Notes</Link></li>    
+                <li><Link to = "/meditation">Meditation</Link></li>
             </ul>
-        </div>    
-
+            </nav>
+        </footer>
     )
 }
 
