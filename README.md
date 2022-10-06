@@ -41,7 +41,7 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 * App will be mobile responsive
 ## <a name="deployment"></a>Deployed Link
 - [Backend(hosted on Heroku)](https://vibe-voyage.herokuapp.com/notes/)  
--[Frontend(hosted on Netlify)](____)
+- [Frontend(hosted on Netlify)](____)
 
 
 * Our Github Repositories:
