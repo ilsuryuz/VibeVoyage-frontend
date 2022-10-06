@@ -9,6 +9,7 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 * [Deployed App](#deployment)
 * [Our Github Repositories:](#github)
 * [About Team Panther.js](#team)
+
 ## <a name="technologiesused"></a>Technologies Used
 - MERN
 - Heroku  
@@ -19,11 +20,14 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 - Users can enter health notes.
 - Users can edit thier entries and see them displayed.  
 - Users can delete thier entries.
-- Users benefit from the relaxation/meditation page.    
+- Users benefit from the relaxation/meditation page.
+
 ## Trello Planning
 [Team Panther.js Trello Board](https://trello.com/b/X4KtfK7j/vibevoyage)
+
 ## Wireframe
 [Team Panther.js Wireframe](https://trello.com/1/cards/6335ab1d9ef33e030b3094ec/attachments/6335ab1d9ef33e030b309506/previews/6335ab1e9ef33e030b309513/download/image.png)
+
 ## Screenshots
 
 
@@ -42,5 +46,6 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 
 ## Works Cited:
 Stack Overflow and MDN
+
 ## <a name="team"></a>About Team Panther.js
 We are a group of passionate and innovative students that came together for a group project at General Assembly. We want to bring the core values of self-care and healthy lifestyle through the skills we have acquired since beginning our cohort in August of 2022. We hope you enjoy the product we have brought to you, please feel free to spread the vibes.

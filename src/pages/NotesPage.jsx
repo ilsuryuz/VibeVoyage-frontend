@@ -27,12 +27,13 @@ function NotesPage(props) {
     props.deleteNotes(note._id)
   }
 
+  // edit state
   const [editForm, setEditForm] = useState(defaultNoteState)
-
+  // handle edit inputs change
   const handleEditChange = event => {
     setEditForm({ ...editForm, [event.target.name]: event.target.value })
   }
-
+  // handle edit form submit
   const handleEdit = event => {
     event.preventDefault();
     props.updateNotes(editForm, editForm._id)
@@ -58,11 +59,11 @@ function NotesPage(props) {
       <div key={note._id} className="note">
         <h1>{note.name}</h1>
         <h3>{note.title}</h3>
-        <h3>{note.content}</h3>
+        <p>{note.content}</p>
         {
           clicked === true && editForm._id === note._id ?
             <>
-              <div className='noteEdit'>
+              
                 <form onSubmit={handleEdit}>
                   <input
                     type="text"
@@ -87,7 +88,7 @@ function NotesPage(props) {
                   />
                   <input type="submit" value="Update Note" />
                 </form>
-              </div></>
+              </>
             :
             <></>
         }
@@ -109,7 +110,7 @@ function NotesPage(props) {
     return <h1>Loading...</h1>;
   };
   return (
-    <section>
+    <section className="mainNotes">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -134,7 +135,9 @@ function NotesPage(props) {
         />
         <input type="submit" value="Add Note" />
       </form>
+      <div className="content">
       {props.notes ? loaded() : loading()}
+      </div>
     </section>
   );
 }

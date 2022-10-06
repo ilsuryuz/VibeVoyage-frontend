@@ -109,11 +109,14 @@ function Main(props) {
           }}
         />
         <Route path="/meditation">
+        
+        
         <EmbedVideo embedId="pn6sTK6a3Ig" />
           <VideosPage
             video={video}
             deleteVideo={deleteVideo}
             createVideo={createVideo} />
+
         </Route>
         <Route path="/about">
           <AboutPage />
@@ -124,3 +127,4 @@ function Main(props) {
 }
 
 export default Main;
+
