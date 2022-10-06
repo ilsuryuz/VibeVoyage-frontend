@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# VibeVoyage
+VibeVoyage is not just a tool but an experience. This app enables the user to choose to register and login to the app's notes page or find relaxation through the meditation page. Visitors do not have to login to benefit from the guided meditations on the Meditation Page. Registered users have an opportunity to store and track their health goals, notes, and tasks to improve overall physical and mental health. This app is built with the MERN stack, providing registered users the ability to create, edit and delete their notes and retrieve them later. Additionally, the user can be sure their information is protected with OAuth built in to register and login allowing seemless interaction throughout the site.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+* [Technologies Used](#technologiesused)
+* [Features](#features)
+* [Design](#design)
+* [Project Next Steps](#nextsteps)
+* [Deployed App](#deployment)
+* [About the Author](#author)
+## <a name="technologiesused"></a>Technologies Used
+* JavaScript
+* HTML5
+* CSS  
+* Bootstrap
+* EJS
+* EXPRESS
+* Node.Js
+* MONGO DB
+* MONGOOSE
+* HEROKU  
+* React  
+* OAuth  
+* Video Embedding  
 
-## Available Scripts
+## <a name="features"></a>Features
+* Users can enter health notes.
+* Users can edit thier entries and see them displayed.  
+* Users can delete thier entries.
+* Users benefit from the relaxation/meditation page.    
+## Trello Planning
+https://trello.com/b/X4KtfK7j/vibevoyage
+## Wireframe
+https://trello.com/1/cards/6335ab1d9ef33e030b3094ec/attachments/6335ab1d9ef33e030b309506/previews/6335ab1e9ef33e030b309513/download/image.png
+## Screenshot
+* Design elements implemented using HTML and CSS.
+![Screen Shot 2022-09-15 at 9 47 29 PM](https://user-images.githubusercontent.com/77770242/190539228-ad9e4c3e-3618-4ebd-a20a-789e88ed6415.png)
+![Screen Shot 2022-09-15 at 9 48 38 PM](https://user-images.githubusercontent.com/77770242/190539250-2f4fe9f8-c342-4d10-90a4-c7ed3e75abca.png)
+![Screen Shot 2022-09-15 at 9 49 43 PM](https://user-images.githubusercontent.com/77770242/190539273-1b1776ab-9ba1-4792-8c4b-01c86063eed7.png)
+![Screen Shot 2022-09-15 at 9 50 07 PM](https://user-images.githubusercontent.com/77770242/190539289-f7d3f0ab-e99e-4166-b248-5e15844c39b0.png)
+![Screen Shot 2022-09-15 at 9 50 23 PM](https://user-images.githubusercontent.com/77770242/190539304-f88d895d-70c6-491a-a8e4-1ceba4b99331.png)
 
-In the project directory, you can run:
+## <a name="nextsteps"></a>Project Next Steps
+* users will be able to access Spotify API for calming music
+* users will also be able to use this app on mobile devices.
+## <a name="deployment"></a>Deployed Link
+Heroku(backend):
+https://vibe-voyage.herokuapp.com/notes/  
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Full Functionality can be obtained via vs code ***
+* You can view the repository:
+[Github.com](https://github.com/brandonhernandez304/VibeVoyage-frontend)
+[Github.com](https://github.com/brandonhernandez304/VibeVoyage-backend)
+* If unable to view please go live locally through VS Code
+## Works Cited:
+Stack Overflow and MDN
+## <a name="author"></a>About The Author
+We are  centric and functional devlopers that specializes in creating meaningful products.
