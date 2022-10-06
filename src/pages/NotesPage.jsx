@@ -21,14 +21,31 @@ function NotesPage(props) {
     });
   };
 
+  const note = {
+    name: "",
+    title: "",
+    content: "",
+  }
+
+  const removeNote = (note) => {
+    props.deleteNotes(note._id)
+  }
+
   // loaded function
     const loaded = () => {
       return notes.map((note) => (
        <div key={note._id} className="note">
           <h1>{note.name}</h1>
           <h3>{note.title}</h3>
-          <h3>{note.content}</h3>   
-        </div>   
+          <h3>{note.content}</h3>
+          <div>
+            <button>Edit</button>
+            <button onClick={() => {
+              removeNote(note);
+            }
+            }>Delete</button>
+          </div>
+        </div> 
         //  console.log(note)
       ));
     };
