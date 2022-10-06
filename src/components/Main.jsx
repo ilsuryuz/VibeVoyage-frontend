@@ -30,13 +30,13 @@ function Main(props) {
     getNotes();
   };
 
-  const updateNotes = async (person, id) => {
+  const updateNotes = async (note, id) => {
     await fetch(URL + "notes/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
       },
-      body: JSON.stringify(notes),
+      body: JSON.stringify(note),
     })
     getNotes();
   }
@@ -47,7 +47,7 @@ function Main(props) {
     })
     getNotes();
   }
-  const [ video, setVideo ] = useState(null);
+  const [video, setVideo] = useState(null);
 
   const getVideo = async () => {
     const response = await fetch(URL + "videos/");
@@ -56,7 +56,7 @@ function Main(props) {
   };
 
   const createVideo = async video => {
-    
+
     await fetch(URL + "videos/", {
       method: "POST",
       headers: {
@@ -64,16 +64,16 @@ function Main(props) {
       },
       body: JSON.stringify(video),
     });
- //Update Video Directory
+    //Update Video Directory
     getVideo();
   }
 
   const deleteVideo = async id => {
-    
+
     await fetch(URL + "videos/" + id, {
       method: "DELETE",
     })
-    
+
     getVideo();
   }
   useEffect(() => {
@@ -88,13 +88,20 @@ function Main(props) {
           <IndexPage />
         </Route>
         <Route path="/notes">
-          <NotesPage notes={notes} createNotes={createNotes} />
+          <NotesPage
+            notes={notes}
+            createNotes={createNotes}
+            updateNotes={updateNotes}
+            deleteNotes={deleteNotes}
+          />
         </Route>
         <Route
           path="/notes/:id"
           render={(rp) => {
             return (
               <NotesPage
+                updateNotes={updateNotes}
+                deleteNotes={deleteNotes}
                 {...rp}
               />
             )
@@ -102,9 +109,9 @@ function Main(props) {
         />
         <Route path="/meditation">
           <VideosPage
-           video={video}
-           deleteVideo={deleteVideo}
-           createVideo={createVideo} />
+            video={video}
+            deleteVideo={deleteVideo}
+            createVideo={createVideo} />
         </Route>
         <Route path="/about">
           <AboutPage />
