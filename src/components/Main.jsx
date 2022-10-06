@@ -109,19 +109,14 @@ function Main(props) {
           }}
         />
         <Route path="/meditation">
-<<<<<<< HEAD
-=======
-
->>>>>>> d942189ba932c4ba222dc9c065946bc59bea76d6
+        
+        
         <EmbedVideo embedId="pn6sTK6a3Ig" />
           <VideosPage
             video={video}
             deleteVideo={deleteVideo}
             createVideo={createVideo} />
-<<<<<<< HEAD
-=======
 
->>>>>>> d942189ba932c4ba222dc9c065946bc59bea76d6
         </Route>
         <Route path="/about">
           <AboutPage />
