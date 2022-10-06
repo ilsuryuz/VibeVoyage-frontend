@@ -27,12 +27,13 @@ function NotesPage(props) {
     props.deleteNotes(note._id)
   }
 
+  // edit state
   const [editForm, setEditForm] = useState(defaultNoteState)
-
+  // handle edit inputs change
   const handleEditChange = event => {
     setEditForm({ ...editForm, [event.target.name]: event.target.value })
   }
-
+  // handle edit form submit
   const handleEdit = event => {
     event.preventDefault();
     props.updateNotes(editForm, editForm._id)
