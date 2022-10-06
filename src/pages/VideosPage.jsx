@@ -1,40 +1,38 @@
 import { useState } from "react";
 
 function VideosPage (props) {
-
-    <div>
-       
-    </div>
-    console.log(props);
   const [ newForm, setNewForm ] = useState({
     name: "",
     url: "",
   });
 
-
+  // handle create video inputs change
   const handleChange = (event) => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
 
- 
+  // handle create form submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(props);
     props.createVideo(newForm);
     setNewForm({
       name: "",
       url: "",
        });
-       console.log(event);
   };
 
+  const removeVideo = (video) => {
+    props.deleteVideo(video._id)
+  }
+
   const loaded = () => {
-    console.log(props.video);
     return props.video.map((video) => (
       <div key={video._id} className="video">
-        {/* <Link to={`/videos/${video._id}`}><h1>{video.name}</h1></Link> */}
         <a href={video.url} alt={video.name} >{video.name}</a>
-      
+        <div>
+        <button 
+        onClick={() => {removeVideo(video)}}>Delete</button>
+        </div>
       </div>
     ));
   };
