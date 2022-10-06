@@ -6,12 +6,12 @@ function VideosPage (props) {
     url: "",
   });
 
-
+  // handle create video inputs change
   const handleChange = (event) => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
 
- 
+  // handle create form submit
   const handleSubmit = (event) => {
     event.preventDefault();
     props.createVideo(newForm);
@@ -21,11 +21,18 @@ function VideosPage (props) {
        });
   };
 
+  const removeVideo = (video) => {
+    props.deleteVideo(video._id)
+  }
+
   const loaded = () => {
     return props.video.map((video) => (
       <div key={video._id} className="video">
         <a href={video.url} alt={video.name} >{video.name}</a>
-      
+        <div>
+        <button 
+        onClick={() => {removeVideo(video)}}>Delete</button>
+        </div>
       </div>
     ));
   };
