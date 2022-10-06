@@ -29,7 +29,11 @@ nav {
   top: 0;
   width: 100%;
   height: 50px;
+<<<<<<< HEAD
+  background:rgb(255, 255, 255);
+=======
   background:var(--thistle-purple);
+>>>>>>> d942189ba932c4ba222dc9c065946bc59bea76d6
 }
 
 .navLinks {
@@ -43,6 +47,17 @@ nav {
   position: relative;
 }
 
+<<<<<<< HEAD
+
+ul li {
+    margin-right: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+=======
 ul{
   display:flex;
   justify-content: center;
@@ -93,6 +108,7 @@ a:hover {
   text-decoration: none;
   color: var(--eggshell-white);
 }
+>>>>>>> d942189ba932c4ba222dc9c065946bc59bea76d6
 
 /*Video Embeds*/
 .video-responsive {
@@ -124,4 +140,40 @@ iframe {
 }
 .VideoInputText {
   padding-top: 300px;
+<<<<<<< HEAD
+}
+
+/*About Page*/
+.AboutUsTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: blueviolet;
+  font-size: 50px;
+  background-color: rgb(155, 230, 235);
+}
+.AboutText {
+
+}
+
+.BodyText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 75px;
+
+}
+
+h1 {
+  color:rgb(24, 4, 22);
+ 
+}
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+=======
+>>>>>>> d942189ba932c4ba222dc9c065946bc59bea76d6
 }
