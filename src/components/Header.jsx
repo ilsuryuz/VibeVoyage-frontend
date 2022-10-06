@@ -15,10 +15,7 @@ function Header (props) {
       </ul>
     </nav>
   </header>
-
-
   )
-
 }
 
 export default Header
