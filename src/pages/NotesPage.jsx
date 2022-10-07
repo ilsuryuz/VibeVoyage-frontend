@@ -59,11 +59,11 @@ function NotesPage(props) {
       <div key={note._id} className="note">
         <h1>{note.name}</h1>
         <h3>{note.title}</h3>
-        <h3>{note.content}</h3>
+        <p>{note.content}</p>
         {
           clicked === true && editForm._id === note._id ?
             <>
-              <div className='noteEdit'>
+              
                 <form onSubmit={handleEdit}>
                   <input
                     type="text"
@@ -88,7 +88,7 @@ function NotesPage(props) {
                   />
                   <input type="submit" value="Update Note" />
                 </form>
-              </div></>
+              </>
             :
             <></>
         }
@@ -110,32 +110,34 @@ function NotesPage(props) {
     return <h1>Loading...</h1>;
   };
   return (
-    <section>
+    <section className="mainNotes">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={newForm.name}
           name="name"
-          placeholder="name"
+          placeholder="New Habit"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.title}
           name="title"
-          placeholder="title"
+          placeholder="Why Change?"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.content}
           name="content"
-          placeholder="content"
+          placeholder="Desired Result ?"
           onChange={handleChange}
         />
         <input type="submit" value="Add Note" />
       </form>
+      <div className="content">
       {props.notes ? loaded() : loading()}
+      </div>
     </section>
   );
 }
