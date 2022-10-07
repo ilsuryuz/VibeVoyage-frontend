@@ -37,6 +37,7 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 ## Screenshots
 ![Screen Shot 2022-10-07 at 12 12 56 AM](https://user-images.githubusercontent.com/77770242/194466652-f2492474-ac4d-4513-aac1-fcffa3b3abea.png)
 ![Screen Shot 2022-10-07 at 12 13 21 AM](https://user-images.githubusercontent.com/77770242/194466669-67071d3a-2237-4806-a301-087defa70d61.png)
+![Screen Shot 2022-10-07 at 12 14 01 AM](https://user-images.githubusercontent.com/77770242/194466851-574dd65c-627b-4c00-868a-5be8f3201682.png)
 
 ![Screen Shot 2022-10-07 at 12 13 37 AM](https://user-images.githubusercontent.com/77770242/194466685-e32b910f-65eb-4416-83fa-d25e8dec1370.png)
 
