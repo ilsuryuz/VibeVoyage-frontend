@@ -14,7 +14,7 @@ const AboutPage = () => {
         organization, efficiency and intention. </h3>
 <h2>Commemorating You</h2>
 <div className="CommemoratingYou">
-<img src="https://mcusercontent.com/2f8927d14f41758bfeba67442/images/44543fe2-6ca6-f243-08e0-2734b509eba4.png" alt="Sharing The Vibes"/>
+<img src="https://mcusercontent.com/2f8927d14f41758bfeba67442/images/44543fe2-6ca6-f243-08e0-2734b509eba4.png" alt="Focus Wheel"/>
 </div>
 <h3>In life things can get hectic. Even forgetting simple things such as remembering to breathe or drinking water can easily slip by us.
    Our application will help you remember even the little things to keep you focused on YOU. </h3>
@@ -33,7 +33,10 @@ const AboutPage = () => {
 </h3>
    <h1>Our Team </h1>
    <div className="TheBombSquad">
-   <img src="https://mcusercontent.com/2f8927d14f41758bfeba67442/images/4f529b73-2d81-5d9f-1d84-2c8fa375f9c6.png" alt="The Best Team Ever"/>
+   <img src="https://mcusercontent.com/2f8927d14f41758bfeba67442/images/c6cf4a82-8bd8-e3c1-cde9-a8db31ac2f19.png" alt="The Best Team Ever"/>
+   </div>
+   <div>
+    <h4>This is a secret easter egg for the instructors. Thank you guys for all you do! We trulty appreciate each of you! Keep Vibin!</h4>
    </div>
       </div>
 

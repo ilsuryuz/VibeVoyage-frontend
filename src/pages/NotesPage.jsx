@@ -116,21 +116,21 @@ function NotesPage(props) {
           type="text"
           value={newForm.name}
           name="name"
-          placeholder="name"
+          placeholder="New Habit"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.title}
           name="title"
-          placeholder="title"
+          placeholder="Why Change?"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.content}
           name="content"
-          placeholder="content"
+          placeholder="Desired Result ?"
           onChange={handleChange}
         />
         <input type="submit" value="Add Note" />

@@ -43,7 +43,7 @@ function VideosPage (props) {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form className="VideoForm" onSubmit={handleSubmit}>
         <input
           type="text"
           value={newForm.name}
@@ -51,7 +51,6 @@ function VideosPage (props) {
           placeholder="video name"
           onChange={handleChange}
         />
-        <br></br>
         <input
           type="text"
           value={newForm.url}
@@ -59,12 +58,15 @@ function VideosPage (props) {
           placeholder="video URL"
           onChange={handleChange}
         />
+  
         <input type="submit" value="Add New Video" />
       </form>
+      <div className="videolist">
       {props.video ? loaded() : loading()}
+      </div>
     </section>
+
   );
 }
 
 export default VideosPage;
-//Help From Office Hrs
