@@ -14,8 +14,8 @@ VibeVoyage is not just a tool but an experience. This app enables the user to ch
 
 ## <a name="technologiesused"></a>Technologies Used
 - MERN
-- Heroku  
-- React 
+- Heroku
+- Netlify
 - Video Embedding  
 
 ## <a name="features"></a>Features
